@@ -1,6 +1,6 @@
 {
   "name": "@lavacord/discord.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple by design lavalink wrapper made for any discord library.",
   "main": "dist/index",
   "types": "dist/index.d.ts",
@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/MrJacz/discord.js#readme",
   "dependencies": {
-    "lavacord": "^1.1.0"
+    "lavacord": "latest"
   },
   "devDependencies": {
     "@types/node": "^13.9.3",
