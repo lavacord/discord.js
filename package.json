@@ -37,7 +37,7 @@
     "lavacord": "latest"
   },
   "devDependencies": {
-    "@types/node": "^13.9.3",
+    "@types/node": "^13.11.0",
     "@types/ws": "^7.2.3",
     "@typescript-eslint/eslint-plugin": "^2.24.0",
     "@typescript-eslint/parser": "^2.24.0",

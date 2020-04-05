@@ -43,10 +43,15 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.4.tgz#38fd73ddfd9b55abb1e1b2ed578cb55bd7b7d339"
   integrity sha512-8+KAKzEvSUdeo+kmqnKrqgeE+LcA0tjYWFY7RPProVYwnqDjukzO+3b6dLD56rYX5TdWejnEOLJYOIeh4CXKuA==
 
-"@types/node@*", "@types/node@^13.9.3":
+"@types/node@*":
   version "13.9.3"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-13.9.3.tgz#6356df2647de9eac569f9a52eda3480fa9e70b4d"
   integrity sha512-01s+ac4qerwd6RHD+mVbOEsraDHSgUaefQlEdBbUolnQFjKwCr7luvAlEwW1RFojh67u0z4OUTjPn9LEl4zIkA==
+
+"@types/node@^13.11.0":
+  version "13.11.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.11.0.tgz#390ea202539c61c8fa6ba4428b57e05bc36dc47b"
+  integrity sha512-uM4mnmsIIPK/yeO+42F2RQhGUIs39K2RFmugcJANppXe6J1nvH87PvzPZYpza7Xhhs8Yn9yIAVdLZ84z61+0xQ==
 
 "@types/ws@^7.2.3":
   version "7.2.3"
@@ -693,10 +698,10 @@ json-stable-stringify-without-jsonify@^1.0.1:
   resolved "https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
   integrity sha1-nbe1lJatPzz+8wp1FC0tkwrXJlE=
 
-lavacord@^1.1.0:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/lavacord/-/lavacord-1.1.2.tgz#18f0681104cbb289fa3f7c84085a6a61999ef04e"
-  integrity sha512-QrnvFK1QzZoqAyAKgPsvzvClWMtJHbjHSgqCz3GCMmyED80J6eM9+6DoGh4Vy94O6GjYssebrnWXE8Vkb2z3yg==
+lavacord@latest:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/lavacord/-/lavacord-1.1.5.tgz#888d6b00b89ad20af7174bb313c2620928bc74c3"
+  integrity sha512-sB5FsBPRIUzVN7ZNZdyhNnsyP81YJIc5zNp+mc0K0WWleKVy/h92j7r+7wbcb2nCEJmr8cWwATGJNHr6teYa/A==
   dependencies:
     node-fetch "^2.6.0"
     ws "^7.2.3"
