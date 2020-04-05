@@ -31,6 +31,7 @@ export class Manager extends LavacordManager {
                     for (const state of data.voice_states) await this.voiceStateUpdate({ ...state, guild_id: data.id });
                 });
         } else {
+            // @ts-ignore
             client.on("raw", async (packet: DiscordPacket) => {
                 switch (packet.t) {
                     case "VOICE_SERVER_UPDATE":
