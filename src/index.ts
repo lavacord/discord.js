@@ -1,10 +1,22 @@
 /* eslint-disable @typescript-eslint/ban-ts-ignore */
-import { Manager as LavacordManager, LavalinkNodeOptions, ManagerOptions, DiscordPacket } from "lavacord";
+import { Manager as LavacordManager, LavalinkNodeOptions, DiscordPacket, ManagerOptions } from "lavacord";
 import { Client as DiscordClient } from "discord.js";
 
 export class Manager extends LavacordManager {
-    public constructor(readonly client: DiscordClient, nodes: LavalinkNodeOptions[], options: ManagerOptions) {
-        super(nodes, options);
+    public constructor(readonly client: DiscordClient, nodes: LavalinkNodeOptions[], options?: ManagerOptions) {
+        super(nodes, options || {});
+
+        this.send = packet => {
+            if (this.client.guilds.cache) {
+                const guild = this.client.guilds.cache.get(packet.d.guild_id);
+                if (guild) return this.client.ws.shards.get(guild.shardID)!.send(packet);
+            } else {
+                // @ts-ignore
+                const guild = this.client.guilds.get(packet.d.guild_id);
+                // @ts-ignore
+                if (guild) return this.client.ws.send(packet);
+            }
+        };
 
         client.once("ready", () => {
             this.user = client.user!.id;
@@ -35,16 +47,4 @@ export class Manager extends LavacordManager {
         }
     }
 
-    // @ts-ignore
-    public send(packet: DiscordPacket): void {
-        if (this.client.guilds.cache) {
-            const guild = this.client.guilds.cache.get(packet.d.guild_id);
-            if (guild) return this.client.ws.shards.get(guild.shardID)!.send(packet);
-        } else {
-            // @ts-ignore
-            const guild = this.client.guilds.get(packet.d.guild_id);
-            // @ts-ignore
-            if (guild) return this.client.ws.send(packet);
-        }
-    }
 }
