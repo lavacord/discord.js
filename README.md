@@ -1,11 +1,9 @@
 [![Discord](https://discordapp.com/api/guilds/323779330033319941/embed.png)](https://discord.gg/wXrjZmV)
 [![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/@lavacord/discord.js)
 [![npm downloads](https://img.shields.io/npm/dt/@lavacord/discord.js.svg?maxAge=3600)](https://www.npmjs.com/package/@lavacord/discord.js)
-[![NPM version](https://badge.fury.io/js/@lavacord/discord.js.svg)](http://badge.fury.io/js/@lavacord/discord.js)
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![dependencies Status](https://david-dm.org/lavacord/discord.js/status.svg)](https://david-dm.org/lavacord/discord.js)
 [![devDependencies Status](https://david-dm.org/lavacord/discord.js/dev-status.svg)](https://david-dm.org/lavacord/discord.js?type=dev)
-[![NPM](https://nodei.co/npm/@lavacord/discord.js.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/@lavacord/discord.js)
 
 # @Lavacord/Discord.js
 A simple and easy to use lavalink wrapper for discord.js that uses lavacord underneath
