@@ -1,6 +1,6 @@
 {
   "name": "@lavacord/discord.js",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A simple to use lavalink wrapper for the discord.js library",
   "main": "dist/index",
   "types": "dist/index.d.ts",
@@ -34,18 +34,18 @@
   },
   "homepage": "https://github.com/MrJacz/discord.js#readme",
   "dependencies": {
-    "lavacord": "latest"
+    "lavacord": "1.1.9"
   },
   "devDependencies": {
-    "@types/node": "^13.13.0",
+    "@types/node": "^14.0.1",
     "@types/ws": "^7.2.4",
-    "@typescript-eslint/eslint-plugin": "^2.28.0",
-    "@typescript-eslint/parser": "^2.28.0",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
     "discord.js": "^12.2.0",
-    "eslint": "^6.8.0",
+    "eslint": "^7.0.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.9.2"
   },
   "peerDependencies": {
     "discord.js": "^12.2.0"
