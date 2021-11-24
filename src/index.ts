@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/ban-ts-ignore */
-import { Manager as LavacordManager, LavalinkNodeOptions, DiscordPacket, ManagerOptions } from "lavacord";
+import { Manager as LavacordManager, LavalinkNodeOptions, ManagerOptions } from "lavacord";
 import { Client as DiscordClient } from "discord.js";
 
 export * from "lavacord";
