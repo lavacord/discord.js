@@ -5,6 +5,8 @@ export * from "lavacord";
 
 export class Manager extends LavacordManager {
     public constructor(readonly client: DiscordClient, nodes: LavalinkNodeOptions[], options?: ManagerOptions) {
+        if (options && !options.user && client.user?.id) options.user = client.user.id;
+        else if (!options && client.user?.id) options = { user: client.user.id };
         super(nodes, options || {});
 
         this.send = packet => {
