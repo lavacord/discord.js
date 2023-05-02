@@ -5,7 +5,7 @@
 [![Depfu](https://badges.depfu.com/badges/c1805ab948c37b19d3bd3d49256c3987/overview.svg)](https://depfu.com/github/lavacord/discord.js?project_id=11809)
 
 # @Lavacord/Discord.js
-A simple and easy to use lavalink wrapper for discord.js that uses lavacord underneath
+A simple and easy to use Lavalink wrapper for discord.js that uses LavaCord underneath.
 
 ## Documentation
 [**lavacord.github.io/lavacord**](https://lavacord.github.io/Lavacord/)
@@ -22,23 +22,23 @@ npm install @lavacord/discord.js
 ```
 
 # How to use
-`@lavacord/discord.js` acts as lavacord, it exports everything that lavacord has.
-To use this you first start by initializing the `Manager` which you do like this
+`@lavacord/discord.js` acts as LavaCord and exports everything that LavaCord has.
+To use this, you first start by initializing the `Manager` as shown below.
 
 ```javascript
 const { Manager } = require("@lavacord/discord.js");
 
-// Client is your Discord.js client instance.
-// Nodes is ur array of node options.
-// There is also an optional parameter, which is options so you can pass your user id, shard count manually if you want to
+// `client` is your Discord.js client instance.
+// `modes` is your array of node options.
+// `options` is an optional parameter, and is the manager options so you can pass your user id and shard count manually if you want to
 const manager = new Manager(client, nodes);
 
-// Then you need to call Manager#connect, this connects to all of your Lavalink Nodes so the library can function. The function does return a Promise which you want to handle
+// Then you need to call Manager#connect. This connects to all of your Lavalink Nodes so the library can function. The function returns a Promise which you want to handle
 await manager.connect();
 ```
 
 That's all you have to do to get a basic start.
-Look at the readme for Lavacord for more information, you also have the documentation. Join the discord for more!
+View the the readme for Lavacord for more information, and documentation is also available. Join the Discord for more!
 
 ## LavaLink configuration
 Download from [the CI server](https://ci.fredboat.com/viewLog.html?buildId=lastSuccessful&buildTypeId=Lavalink_Build&tab=artifacts&guest=1)
