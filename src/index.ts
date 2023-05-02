@@ -1,5 +1,5 @@
 import { Manager as LavacordManager, LavalinkNodeOptions, ManagerOptions } from "lavacord";
-import { Client as DiscordClient } from "discord.js";
+import { Client as DiscordClient, GatewayDispatchEvents } from "discord.js";
 
 export * from "lavacord";
 
@@ -20,11 +20,10 @@ export class Manager extends LavacordManager {
         });
 
         client.ws
-            .on("VOICE_SERVER_UPDATE", this.voiceServerUpdate.bind(this))
-            .on("VOICE_STATE_UPDATE", this.voiceStateUpdate.bind(this))
-            .on("GUILD_CREATE", async data => {
+            .on(GatewayDispatchEvents.VoiceServerUpdate, this.voiceServerUpdate.bind(this))
+            .on(GatewayDispatchEvents.VoiceStateUpdate, this.voiceStateUpdate.bind(this))
+            .on(GatewayDispatchEvents.GuildCreate, async data => {
                 for (const state of data.voice_states) await this.voiceStateUpdate({ ...state, guild_id: data.id });
             });
     }
-
 }
