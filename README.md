@@ -4,7 +4,7 @@
 [![GitHub](https://img.shields.io/github/license/lavacord/discord.js)](https://github.com/lavacord/discord.js/)
 [![Depfu](https://badges.depfu.com/badges/c1805ab948c37b19d3bd3d49256c3987/overview.svg)](https://depfu.com/github/lavacord/discord.js?project_id=11809)
 
-# @Lavacord/Discord.js
+# @lavacord/discord.js
 A simple and easy to use Lavalink wrapper for discord.js that uses LavaCord underneath.
 
 ## Documentation
@@ -30,7 +30,7 @@ const { Manager } = require("@lavacord/discord.js");
 
 // `client` is your Discord.js client instance.
 // `modes` is your array of node options.
-// `options` is an optional parameter, and is the manager options so you can pass your user id and shard count manually if you want to
+// `options` (optional) is the manager options - you can use this to pass the user id and shard count manually if you want to
 const manager = new Manager(client, nodes);
 
 // Then you need to call Manager#connect. This connects to all of your Lavalink Nodes so the library can function. The function returns a Promise which you want to handle
